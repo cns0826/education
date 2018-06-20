@@ -1,0 +1,51 @@
+package com.apress.spring;
+
+import org.apache.http.impl.client.AbstractHttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.apress.spring.domain.Journal;
+import com.apress.spring.repository.JournalRepository;
+
+
+
+@SpringBootApplication
+public class SpringBootJournalApplication {
+
+/*
+    @Bean
+    InitializingBean saveData(JournalRepository repo) {
+        return () -> {
+            repo.save(new Journal("Performance Test Education1","This is Test 1","01/01/2016"));
+            repo.save(new Journal("Performance Test Education2","This is Test 2","01/01/2016"));
+            repo.save(new Journal("Performance Test Education3","This is Test 3","01/01/2016"));
+            repo.save(new Journal("Performance Test Education4","This is Test 4","01/01/2016"));
+            repo.save(new Journal("Performance Test Education5","This is Test 5","01/01/2016"));
+        };
+    }
+
+    @Bean
+    CommandLineRunner init(JournalRepository repo) {
+        return args -> {
+            System.out.println("---------------------------------");
+            repo.findAll().forEach(System.out::println);
+            System.out.println("---------------------------------");
+        };
+    }
+*/
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootJournalApplication.class, args);
+    }
+
+
+}
+
+
+
+
+

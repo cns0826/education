@@ -1,0 +1,10 @@
+/home/yforetel/app33/src/main/java/com/apress/spring/domain/Product.java
+/home/yforetel/app33/src/main/java/com/apress/spring/repository/JournalRepository.java
+/home/yforetel/app33/src/main/java/com/apress/spring/config/ConnectionManager.java
+/home/yforetel/app33/src/main/java/com/apress/spring/web/JournalController.java
+/home/yforetel/app33/src/main/java/com/apress/spring/web/ProdController.java
+/home/yforetel/app33/src/main/java/com/apress/spring/config/ResourceOAuthSecurityConfiguration.java
+/home/yforetel/app33/src/main/java/com/apress/spring/repository/ProductRepository.java
+/home/yforetel/app33/src/main/java/com/apress/spring/domain/RowLock.java
+/home/yforetel/app33/src/main/java/com/apress/spring/SpringBootJournalApplication.java
+/home/yforetel/app33/src/main/java/com/apress/spring/domain/Journal.java

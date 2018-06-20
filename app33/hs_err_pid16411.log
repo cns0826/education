@@ -1,0 +1,71 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 131072 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2640), pid=16411, tid=0x00007fc0b8815700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_171-b11) (build 1.8.0_171-b11)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.171-b11 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fc0b40ae000):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=16440, stack(0x00007fc0b8715000,0x00007fc0b8816000)]
+
+Stack: [0x00007fc0b8715000,0x00007fc0b8816000],  sp=0x00007fc0b8813170,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xacfffa]  VMError::report_and_die()+0x2ba
+V  [libjvm.so+0x5005cb]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*)+0x8b
+V  [libjvm.so+0x92dd93]  os::Linux::commit_memory_impl(char*, unsigned long, bool)+0x123
+V  [libjvm.so+0x92dfb9]  os::pd_commit_memory(char*, unsigned long, unsigned long, bool)+0x29
+V  [libjvm.so+0x92527a]  os::commit_memory(char*, unsigned long, unsigned long, bool)+0x2a
+V  [libjvm.so+0xacbcd9]  VirtualSpace::expand_by(unsigned long, bool)+0x199
+V  [libjvm.so+0x8a9616]  VirtualSpaceList::expand_node_by(VirtualSpaceNode*, unsigned long, unsigned long)+0x76
+V  [libjvm.so+0x8ac430]  VirtualSpaceList::expand_by(unsigned long, unsigned long)+0xf0
+V  [libjvm.so+0x8ac5c3]  VirtualSpaceList::get_new_chunk(unsigned long, unsigned long, unsigned long)+0xb3
+V  [libjvm.so+0x8ae112]  SpaceManager::grow_and_allocate(unsigned long)+0x2d2
+V  [libjvm.so+0x8ae31b]  SpaceManager::allocate_work(unsigned long)+0x14b
+V  [libjvm.so+0x8ae3ac]  SpaceManager::allocate(unsigned long)+0x7c
+V  [libjvm.so+0x8ae5fe]  Metaspace::allocate(ClassLoaderData*, unsigned long, bool, MetaspaceObj::Type, Thread*)+0x17e
+V  [libjvm.so+0x64be2e]  InstanceKlass::allocate_instance_klass(ClassLoaderData*, int, int, int, int, ReferenceType, AccessFlags, Symbol*, Klass*, bool, Thread*)+0xee
+V  [libjvm.so+0x4648c0]  ClassFileParser::parseClassFile(Symbol*, ClassLoaderData*, Handle, KlassHandle, GrowableArray<Handle>*, TempNewSymbol&, bool, Thread*)+0x1040
+V  [libjvm.so+0x46952b]  ClassLoader::load_classfile(Symbol*, Thread*)+0x3fb
+V  [libjvm.so+0xa45560]  SystemDictionary::load_instance_class(Symbol*, Handle, Thread*)+0x380
+V  [libjvm.so+0xa4451c]  SystemDictionary::resolve_instance_class_or_null(Symbol*, Handle, Handle, Thread*)+0x78c
+V  [libjvm.so+0xa459f3]  SystemDictionary::resolve_or_fail(Symbol*, Handle, Handle, bool, Thread*)+0x33
+V  [libjvm.so+0x4f7608]  ConstantPool::klass_at_impl(constantPoolHandle, int, Thread*)+0x158
+V  [libjvm.so+0x68a061]  InterpreterRuntime::_new(JavaThread*, ConstantPool*, int)+0x71
+j  sun.misc.Signal.dispatch(I)V+25
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x695b96]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x1056
+V  [libjvm.so+0x696811]  JavaCalls::call_static(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x2d1
+V  [libjvm.so+0x923f43]  signal_thread_entry(JavaThread*, Thread*)+0x123
+V  [libjvm.so+0xa7f243]  JavaThread::thread_main_inner()+0x103
+V  [libjvm.so+0xa7f38c]  JavaThread::run()+0x11c
+V  [libjvm.so+0x92e0f8]  java_start(Thread*)+0x108
+C  [libpthread.so.0+0x76ba]  start_thread+0xca
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.misc.Signal.dispatch(I)V+25
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fc0b40f7800 JavaThread "Thread-2" [_thread_in_native, id=16528, stack(0x00007fc08451e000,0x00007fc08461f000)]
+  0x00007fc0b40f6000 JavaThread "Thread-1" [_thread_in_native, id=16527, stack(0x00007fc08461f000,0x00007fc084720000)]
+  0x00007fc0b40f4000 
