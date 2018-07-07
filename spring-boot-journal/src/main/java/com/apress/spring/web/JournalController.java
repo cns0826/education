@@ -333,7 +333,7 @@ public List<Journal> http502() {
         try{
             journal = new Journal("Long Transaction Title" , "Long Transaction Summary", "06/19/2018");
             list = new ArrayList<Journal>();
-            Thread.sleep(300000);
+            Thread.sleep(240000);
 
         }catch(Exception e)
         {

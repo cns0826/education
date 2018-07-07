@@ -1,0 +1,288 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 715849728 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2640), pid=24951, tid=0x00007f275aa36700
+#
+# JRE version:  (8.0_171-b11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.171-b11 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f275400a800):  JavaThread "Unknown thread" [_thread_in_vm, id=24952, stack(0x00007f275a936000,0x00007f275aa37000)]
+
+Stack: [0x00007f275a936000,0x00007f275aa37000],  sp=0x00007f275aa35350,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xacfffa]  VMError::report_and_die()+0x2ba
+V  [libjvm.so+0x5005cb]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*)+0x8b
+V  [libjvm.so+0x92dd93]  os::Linux::commit_memory_impl(char*, unsigned long, bool)+0x123
+V  [libjvm.so+0x92dfb9]  os::pd_commit_memory(char*, unsigned long, unsigned long, bool)+0x29
+V  [libjvm.so+0x92527a]  os::commit_memory(char*, unsigned long, unsigned long, bool)+0x2a
+V  [libjvm.so+0xacbcd9]  VirtualSpace::expand_by(unsigned long, bool)+0x199
+V  [libjvm.so+0xacc82e]  VirtualSpace::initialize(ReservedSpace, unsigned long)+0xee
+V  [libjvm.so+0x5fed41]  CardGeneration::CardGeneration(ReservedSpace, unsigned long, int, GenRemSet*)+0xf1
+V  [libjvm.so+0xa729ff]  TenuredGeneration::TenuredGeneration(ReservedSpace, unsigned long, int, GenRemSet*)+0x5f
+V  [libjvm.so+0x600049]  GenerationSpec::init(ReservedSpace, int, GenRemSet*)+0x339
+V  [libjvm.so+0x5eebde]  GenCollectedHeap::initialize()+0x1de
+V  [libjvm.so+0xa98033]  Universe::initialize_heap()+0xf3
+V  [libjvm.so+0xa9859e]  universe_init()+0x3e
+V  [libjvm.so+0x642105]  init_globals()+0x65
+V  [libjvm.so+0xa7cd4e]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x23e
+V  [libjvm.so+0x6d6e44]  JNI_CreateJavaVM+0x74
+C  [libjli.so+0x797e]  JavaMain+0x9e
+C  [libpthread.so.0+0x76ba]  start_thread+0xca
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00007f275400a800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=24952, stack(0x00007f275a936000,0x00007f275aa37000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 299773                             /home/yforetel/jdk1.8.0_171/bin/java
+00600000-00601000 rw-p 00000000 08:01 299773                             /home/yforetel/jdk1.8.0_171/bin/java
+01de2000-01e03000 rw-p 00000000 00:00 0                                  [heap]
+c0000000-d5550000 rw-p 00000000 00:00 0 
+7f274417d000-7f27444b0000 rw-p 00000000 00:00 0 
+7f27444b0000-7f2744605000 ---p 00000000 00:00 0 
+7f2744605000-7f2744610000 rw-p 00000000 00:00 0 
+7f2744610000-7f27449c6000 ---p 00000000 00:00 0 
+7f27449c6000-7f2744c36000 rwxp 00000000 00:00 0 
+7f2744c36000-7f27539c6000 ---p 00000000 00:00 0 
+7f27539c6000-7f27539e1000 r-xp 00000000 08:01 543095                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/libzip.so
+7f27539e1000-7f2753be1000 ---p 0001b000 08:01 543095                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/libzip.so
+7f2753be1000-7f2753be2000 rw-p 0001b000 08:01 543095                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/libzip.so
+7f2753be2000-7f2753bed000 r-xp 00000000 08:01 1987                       /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f2753bed000-7f2753dec000 ---p 0000b000 08:01 1987                       /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f2753dec000-7f2753ded000 r--p 0000a000 08:01 1987                       /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f2753ded000-7f2753dee000 rw-p 0000b000 08:01 1987                       /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f2753dee000-7f2753df4000 rw-p 00000000 00:00 0 
+7f2753df4000-7f2753dff000 r-xp 00000000 08:01 1991                       /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f2753dff000-7f2753ffe000 ---p 0000b000 08:01 1991                       /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f2753ffe000-7f2753fff000 r--p 0000a000 08:01 1991                       /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f2753fff000-7f2754000000 rw-p 0000b000 08:01 1991                       /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f2754000000-7f2754036000 rw-p 00000000 00:00 0 
+7f2754036000-7f2758000000 ---p 00000000 00:00 0 
+7f27580b2000-7f27580c8000 r-xp 00000000 08:01 1964                       /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f27580c8000-7f27582c7000 ---p 00016000 08:01 1964                       /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f27582c7000-7f27582c8000 r--p 00015000 08:01 1964                       /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f27582c8000-7f27582c9000 rw-p 00016000 08:01 1964                       /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f27582c9000-7f27582cb000 rw-p 00000000 00:00 0 
+7f27582cb000-7f27582d3000 r-xp 00000000 08:01 1979                       /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f27582d3000-7f27584d2000 ---p 00008000 08:01 1979                       /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f27584d2000-7f27584d3000 r--p 00007000 08:01 1979                       /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f27584d3000-7f27584d4000 rw-p 00008000 08:01 1979                       /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f27584d4000-7f27584ff000 r-xp 00000000 08:01 543147                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/libjava.so
+7f27584ff000-7f27586fe000 ---p 0002b000 08:01 543147                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/libjava.so
+7f27586fe000-7f2758700000 rw-p 0002a000 08:01 543147                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/libjava.so
+7f2758700000-7f275870d000 r-xp 00000000 08:01 543123                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/libverify.so
+7f275870d000-7f275890d000 ---p 0000d000 08:01 543123                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/libverify.so
+7f275890d000-7f275890f000 rw-p 0000d000 08:01 543123                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/libverify.so
+7f275890f000-7f2758916000 r-xp 00000000 08:01 1992                       /lib/x86_64-linux-gnu/librt-2.23.so
+7f2758916000-7f2758b15000 ---p 00007000 08:01 1992                       /lib/x86_64-linux-gnu/librt-2.23.so
+7f2758b15000-7f2758b16000 r--p 00006000 08:01 1992                       /lib/x86_64-linux-gnu/librt-2.23.so
+7f2758b16000-7f2758b17000 rw-p 00007000 08:01 1992                       /lib/x86_64-linux-gnu/librt-2.23.so
+7f2758b17000-7f2758c1f000 r-xp 00000000 08:01 1963                       /lib/x86_64-linux-gnu/libm-2.23.so
+7f2758c1f000-7f2758e1e000 ---p 00108000 08:01 1963                       /lib/x86_64-linux-gnu/libm-2.23.so
+7f2758e1e000-7f2758e1f000 r--p 00107000 08:01 1963                       /lib/x86_64-linux-gnu/libm-2.23.so
+7f2758e1f000-7f2758e20000 rw-p 00108000 08:01 1963                       /lib/x86_64-linux-gnu/libm-2.23.so
+7f2758e20000-7f2759af9000 r-xp 00000000 08:01 543133                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/server/libjvm.so
+7f2759af9000-7f2759cf8000 ---p 00cd9000 08:01 543133                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/server/libjvm.so
+7f2759cf8000-7f2759dd2000 rw-p 00cd8000 08:01 543133                     /home/yforetel/jdk1.8.0_171/jre/lib/amd64/server/libjvm.so
+7f2759dd2000-7f2759e1d000 rw-p 00000000 00:00 0 
+7f2759e1d000-7f2759fdd000 r-xp 00000000 08:01 1967                       /lib/x86_64-linux-gnu/libc-2.23.so
+7f2759fdd000-7f275a1dd000 ---p 001c0000 08:01 1967                       /lib/x86_64-linux-gnu/libc-2.23.so
+7f275a1dd000-7f275a1e1000 r--p 001c0000 08:01 1967                       /lib/x86_64-linux-gnu/libc-2.23.so
+7f275a1e1000-7f275a1e3000 rw-p 001c4000 08:01 1967                       /lib/x86_64-linux-gnu/libc-2.23.so
+7f275a1e3000-7f275a1e7000 rw-p 00000000 00:00 0 
+7f275a1e7000-7f275a1ea000 r-xp 00000000 08:01 1969                       /lib/x86_64-linux-gnu/libdl-2.23.so
+7f275a1ea000-7f275a3e9000 ---p 00003000 08:01 1969                       /lib/x86_64-linux-gnu/libdl-2.23.so
+7f275a3e9000-7f275a3ea000 r--p 00002000 08:01 1969                       /lib/x86_64-linux-gnu/libdl-2.23.so
+7f275a3ea000-7f275a3eb000 rw-p 00003000 08:01 1969                       /lib/x86_64-linux-gnu/libdl-2.23.so
+7f275a3eb000-7f275a401000 r-xp 00000000 08:01 542987                     /home/yforetel/jdk1.8.0_171/lib/amd64/jli/libjli.so
+7f275a401000-7f275a600000 ---p 00016000 08:01 542987                     /home/yforetel/jdk1.8.0_171/lib/amd64/jli/libjli.so
+7f275a600000-7f275a601000 rw-p 00015000 08:01 542987                     /home/yforetel/jdk1.8.0_171/lib/amd64/jli/libjli.so
+7f275a601000-7f275a619000 r-xp 00000000 08:01 1966                       /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f275a619000-7f275a818000 ---p 00018000 08:01 1966                       /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f275a818000-7f275a819000 r--p 00017000 08:01 1966                       /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f275a819000-7f275a81a000 rw-p 00018000 08:01 1966                       /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f275a81a000-7f275a81e000 rw-p 00000000 00:00 0 
+7f275a81e000-7f275a844000 r-xp 00000000 08:01 1965                       /lib/x86_64-linux-gnu/ld-2.23.so
+7f275a92e000-7f275a936000 rw-s 00000000 08:01 10301                      /tmp/hsperfdata_yforetel/24951
+7f275a936000-7f275a939000 ---p 00000000 00:00 0 
+7f275a939000-7f275aa3c000 rw-p 00000000 00:00 0 
+7f275aa41000-7f275aa42000 rw-p 00000000 00:00 0 
+7f275aa42000-7f275aa43000 r--p 00000000 00:00 0 
+7f275aa43000-7f275aa44000 r--p 00025000 08:01 1965                       /lib/x86_64-linux-gnu/ld-2.23.so
+7f275aa44000-7f275aa45000 rw-p 00026000 08:01 1965                       /lib/x86_64-linux-gnu/ld-2.23.so
+7f275aa45000-7f275aa46000 rw-p 00000000 00:00 0 
+7ffc25387000-7ffc253a8000 rw-p 00000000 00:00 0                          [stack]
+7ffc253d4000-7ffc253d7000 r--p 00000000 00:00 0                          [vvar]
+7ffc253d7000-7ffc253d9000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xms1024m -Xmx1024m -Djava.security.egd=file:/dev/./urandom 
+java_command: ./target/spring-boot-journal-0.0.1-SNAPSHOT.war
+java_class_path (initial): ./target/spring-boot-journal-0.0.1-SNAPSHOT.war
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/yforetel/jdk1.8.0_171/bin/:/home/yforetel/bin:/home/yforetel/.local/bin:/home/yforetel/.sdkman/candidates/springboot/current/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xad0890], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xad0890], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x928640], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x928640], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x928640], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x928640], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x929ea0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.4 LTS"
+
+uname:Linux 4.13.0-1019-gcp #23-Ubuntu SMP Thu May 31 16:13:34 UTC 2018 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 6677, NOFILE 1048576, AS infinity
+load average:0.83 0.29 0.22
+
+/proc/meminfo:
+MemTotal:        1730232 kB
+MemFree:          309324 kB
+MemAvailable:     613424 kB
+Buffers:          110992 kB
+Cached:           324828 kB
+SwapCached:            0 kB
+Active:          1115784 kB
+Inactive:         196260 kB
+Active(anon):     879216 kB
+Inactive(anon):    17508 kB
+Active(file):     236568 kB
+Inactive(file):   178752 kB
+Unevictable:        3652 kB
+Mlocked:            3652 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:             49796 kB
+Writeback:             0 kB
+AnonPages:        879916 kB
+Mapped:            48944 kB
+Shmem:             18056 kB
+Slab:              70424 kB
+SReclaimable:      38552 kB
+SUnreclaim:        31872 kB
+KernelStack:        2936 kB
+PageTables:         7456 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      865116 kB
+Committed_AS:    2504672 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       59340 kB
+DirectMap2M:     1722368 kB
+DirectMap1G:           0 kB
+
+
+CPU:total 1 (initial active 1) (1 cores per cpu, 1 threads per core) family 6 model 79 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0x1
+cpu MHz		: 2200.000
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti retpoline fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 4400.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 1730232k(309324k free), swap 0k(0k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.171-b11) for linux-amd64 JRE (1.8.0_171-b11), built on Mar 28 2018 17:07:08 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Sat Jun 30 11:44:56 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

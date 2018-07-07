@@ -3,8 +3,10 @@ com/apress/spring/repository/ProductRepository.class
 com/apress/spring/web/ProdController.class
 com/apress/spring/web/JournalController.class
 com/apress/spring/domain/Journal.class
+com/apress/spring/exception/NoMoreStockException.class
 com/apress/spring/domain/Product.class
 com/apress/spring/repository/JournalRepository.class
 com/apress/spring/config/ResourceOAuthSecurityConfiguration.class
+com/apress/spring/exception/ProductNotFoundException.class
 com/apress/spring/domain/RowLock.class
 com/apress/spring/SpringBootJournalApplication.class

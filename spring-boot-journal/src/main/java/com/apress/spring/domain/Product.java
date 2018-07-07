@@ -14,10 +14,12 @@ import javax.persistence.Transient;
 public class Product{
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long prod_id;
     private String prod_nm;
     private Long prod_price;
     private String prod_desc;
+    private Long stock_cnt;
 
     @Transient
     private SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
@@ -28,6 +30,7 @@ public class Product{
         this.prod_nm = prod_nm;
         this.prod_price= prod_price;
         this.prod_desc= prod_desc;
+        this.stock_cnt= stock_cnt;
     }
 
     Product() {
@@ -53,6 +56,10 @@ public class Product{
         return prod_price;
     }
 
+    public Long getStock_cnt() {
+        return stock_cnt;
+    }
+
     public void setProd_price(Long prod_price) {
         this.prod_price = prod_price;
     }
@@ -65,6 +72,9 @@ public class Product{
         this.prod_desc= prod_desc;
     }
 
+    public void setStock_cnt(Long stock_cnt) {
+        this.stock_cnt = stock_cnt;
+    }
 
     public String toString() {
         StringBuilder value = new StringBuilder("ProductEntry(");
@@ -76,6 +86,8 @@ public class Product{
         value.append(prod_price);
         value.append(", 상품설명 : ");
         value.append( prod_desc );
+        value.append(", 재고수량 : ");
+        value.append( stock_cnt );
         value.append(")");
         return value.toString();
     }

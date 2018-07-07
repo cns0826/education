@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration scan="true" scanPeriod="30 seconds">
+<configuration scan="true" scanPeriod="1 seconds">
+    <include file="/home/test/app/spring-boot-journal/level.xml" />
     <appender name="FILE"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/my-web-app.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- daily rollover -->
-            <fileNamePattern>logs/web-app.log.%d{yyyy-MM-dd}.log
-            </fileNamePattern>
-            <!-- keep 30 days' worth of history -->
-            <maxHistory>30</maxHistory>
-        </rollingPolicy>
         <encoder>
             <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n
             </pattern>
@@ -22,14 +16,7 @@
             </pattern>
         </encoder>
     </appender>
-    <logger name="com.apress.spring" level="INFO" />
-    <logger name="org.springframework" level="DEBUG" />
-    <logger name="org.hibernate.SQL" level="DEBUG" />
-    <logger name="org.hibernate.tool.hbm2ddl" level="DEBUG"/>
-    <logger name="org.hibernate.type" level="TRACE" />
-    <logger name="org.hibernate.stat" level="DEBUG" />
-    <logger name="org.hibernate.type.BasicTypeRegistry" level="WARN" />
-    <root level="INFO">
+    <root level="${LOG_LEVEL}">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </root>

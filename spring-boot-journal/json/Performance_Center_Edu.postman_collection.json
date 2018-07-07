@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "bec62369-1d56-4535-af89-f08adf23bf57",
+		"name": "Performance_Center_Edu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://35.187.207.139:8081/jsonsearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://35.187.207.139:8081/jsonsearch",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"jsonsearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/jsonUpdate/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "id:297\n{\n    \"id\":297,\n    \"title\",\"Soyoon Test\",\n    \"created\" : 1451606400000,\n    \"summary\": \"This is Test 1\",\n    \"createdAsShort\": \"01/01/2016\"\n}"
+				},
+				"url": {
+					"raw": "http://35.187.207.139:8081/jsonUpdate/297",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"jsonUpdate",
+						"297"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/jsonInsert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"title\": \"This is POST Test\",\n        \"created\": 1451606400000,\n        \"summary\": \"This is Test 1\"\n    }"
+				},
+				"url": {
+					"raw": "http://35.187.207.139:8081/jsonInsert/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"jsonInsert",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/jsonsearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://35.187.207.139:8081/jsonsearch",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"jsonsearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/prod/regist 신규저장",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"prod_nm\": \"pripara\",\n        \"prod_price\": 1000,\n        \"prod_desc\": \"desc test\"\n    }"
+				},
+				"url": {
+					"raw": "http://35.187.207.139:8081/prod/regist/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"prod",
+						"regist",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/prod/regist 신규저장 Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"prod_nm\": \"pripara\",\n        \"prod_price\": 1000,\n        \"prod_desc\": \"desc test\"\n    }"
+				},
+				"url": {
+					"raw": "http://35.187.207.139:8081/prod/regist/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"prod",
+						"regist",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/prod/regist 신규저장 Copy Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"prod_nm\": \"pripara\",\n        \"prod_price\": 1000,\n        \"prod_desc\": \"desc test\"\n    }"
+				},
+				"url": {
+					"raw": "http://35.187.207.139:8081/prod/regist/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"prod",
+						"regist",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/prod/regist 신규저장 Copy Copy Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"prod_nm\": \"pripara\",\n        \"prod_price\": 1000,\n        \"prod_desc\": \"desc test\"\n    }"
+				},
+				"url": {
+					"raw": "http://35.187.207.139:8081/prod/regist/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"prod",
+						"regist",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/prod/ --.> 상품리스트",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://35.187.207.139:8081/prod/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"prod",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/prod/{id} --> 상품상세",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://35.187.207.139:8081/prod/1",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"prod",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/prod/update/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"prod_id\": 1,\n        \"prod_nm\": \"제목변경 테스트 \",\n        \"prod_price\": 1000,\n        \"prod_desc\": \"desc test\"\n    }"
+				},
+				"url": {
+					"raw": "http://35.187.207.139:8081/prod/update/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"prod",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.187.207.139:8081/prod/update/ Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"prod_id\": 1,\n        \"prod_nm\": \"프리파라 재미없어 \",\n        \"prod_price\": 1000,\n        \"prod_desc\": \"desc test\"\n    }"
+				},
+				"url": {
+					"raw": "http://35.187.207.139:8081/prod/update/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"187",
+						"207",
+						"139"
+					],
+					"port": "8081",
+					"path": [
+						"prod",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://admin:kkh4790@35.189.142.158:8080/oauth/token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sollab123",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "read",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://admin:kkh4790@35.189.142.158:8080/deploytest-0.1/oauth/token",
+					"protocol": "http",
+					"host": [
+						"35",
+						"189",
+						"142",
+						"158"
+					],
+					"auth": {
+						"user": "admin",
+						"password": "kkh4790"
+					},
+					"port": "8080",
+					"path": [
+						"deploytest-0.1",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://35.189.142.158:8080/deploytest-0.1/jsonsearch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 195c5516-3a88-49dd-b87b-c162b8faebeb"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"prod_id\": 1,\n        \"prod_nm\": \"프리파라 재미없어 \",\n        \"prod_price\": 1000,\n        \"prod_desc\": \"desc test\"\n    }"
+				},
+				"url": {
+					"raw": "http://35.189.142.158:8080/deploytest-0.1/jsonsearch/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"189",
+						"142",
+						"158"
+					],
+					"port": "8080",
+					"path": [
+						"deploytest-0.1",
+						"jsonsearch",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://admin:kkh4790@35.187.207.139:8080/oauth/token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "superuser",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sollab123",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "read",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://admin:kkh4790@35.189.142.158:8080/deploytest-0.1/oauth/token",
+					"protocol": "http",
+					"host": [
+						"35",
+						"189",
+						"142",
+						"158"
+					],
+					"auth": {
+						"user": "admin",
+						"password": "kkh4790"
+					},
+					"port": "8080",
+					"path": [
+						"deploytest-0.1",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
